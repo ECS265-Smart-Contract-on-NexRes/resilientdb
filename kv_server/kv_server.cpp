@@ -13,8 +13,7 @@ using resdb::ResDBServer;
 using resdb::Stats;
 
 void ShowUsage() {
-  printf(
-      "<config> <private_key> <cert_file> [logging_dir]\n");
+  printf("<config> <private_key> <cert_file> [logging_dir]\n");
 }
 
 int main(int argc, char** argv) {

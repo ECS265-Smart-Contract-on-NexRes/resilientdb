@@ -2,15 +2,15 @@
 
 #include <string>
 
-namespace resdb{
+namespace resdb {
 
 class DBClient {
-	public:
-		DBClient(const std::string& ip, int port);
-		std::string QueryDB(const std::string&);
+ public:
+  DBClient(const std::string& ip, int port);
+  std::string QueryDB(const std::string&);
 
-	private:
-		int sockfd_;
+ private:
+  int sockfd_;
 };
 
-}
+}  // namespace resdb
