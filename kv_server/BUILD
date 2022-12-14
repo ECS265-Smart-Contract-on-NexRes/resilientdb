@@ -1,10 +1,20 @@
 package(default_visibility = ["//visibility:public"])
 
 cc_library(
+    name = "db_client",
+    srcs = ["db_client.cpp"],
+    hdrs = ["db_client.h"],
+    deps = [
+    ],
+)
+
+
+cc_library(
     name = "kv_server_executor",
     srcs = ["kv_server_executor.cpp"],
     hdrs = ["kv_server_executor.h"],
     deps = [
+		    ":db_client",
         "//common:comm",
         "//config:resdb_config_utils",
         "//durable_layer:leveldb_durable",
